@@ -207,3 +207,13 @@ ProduceDictionary={
     }
 }
 
+for k, v in ProduceDictionary.items():
+    num = round(v['cost'] * v['amt_sold'], 2)
+    if num != v['total']:
+        print(f"produce name {k}")
+        realtotal = v['cost'] * v['amt_sold']
+        print(f"Actual Total: ${round(realtotal, 2)}")
+        print(f"Stated Total: ${v['total']}\n")
+
+
+    
